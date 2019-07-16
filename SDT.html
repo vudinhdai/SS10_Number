@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ["0338288331", "0395708467", "0919051996", "09193022002", "01289141666"];
+
+
+    let viettelArr = [];
+    let reg1 = /^[0][8][6][0-9]{7}$/;
+    let reg2 = /^[0][9][678][0-9]{7}$/;
+    let reg3 = /^[0][3][2-9][0-9]{7}$/;
+    for (let i = 0; i < arr.length; i++) {
+        if (reg1.test(arr[i]) || reg2.test(arr[i]) || reg3.test(arr[i])) {
+            viettelArr.push(arr[i]);
+        }
+    }
+    if (viettelArr.length === 0) {
+        alert("Khong co so dien thoai cua Viettel");
+    } else {
+        document.write("Cac so dien thoai cua Viettel la: <br>");
+        for (let i = 0; i < viettelArr.length; i++) {
+            document.write(viettelArr[i] + "<br>");
+        }
+    }
+</script>
+</body>
+</html>
